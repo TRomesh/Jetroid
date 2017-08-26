@@ -26,6 +26,14 @@ public class Explode : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter2D(Collision2D target)
+    {
+        if (target.gameObject.tag == "Deadly")
+        {
+            OnExplode();
+        }
+    }
+
     void OnExplode()
     {
         var t = transform;
